@@ -6,7 +6,7 @@
 
         internal void ShowSupplier()
         {
-            Console.WriteLine("Dostawca części widoczny tylko w bibliotece!");
+            Console.WriteLine("Supplier visible only within the library!");
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using ProductCatalog.Library;
+using ProductCatalog.Library.BO;
 
 namespace ProductCatalog.TlsApp
 {
@@ -7,10 +7,14 @@ namespace ProductCatalog.TlsApp
     {
         public static void Main(string[] args)
         {
-            CarModel myCar = new CarModel("Ford Kuga", 2015);
-            myCar.HasIntelligentAWD = true;
-            
-            Console.WriteLine($"Aplikacja uruchomiona z nowej metody Main! Model: {myCar.Name}");
+            CarModel myCar = new CarModel()
+            {
+                Name = "Ford Kuga",
+                ProductionYear = 2015,
+                HasIntelligentAWD = true
+            };
+
+            Console.WriteLine($"Application started from the new Main method! Model: {myCar.Name}");
         }
     }
 }

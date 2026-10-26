@@ -1,8 +1,17 @@
-﻿using ProductCatalog.Library;
+﻿using System;
+using Interfaces;
+using ProductCatalog.Library.DAO;
 
-CarModel myCar = new CarModel();
-myCar.Name = "Ford Kuga";
-myCar.ProductionYear = 2015;
-myCar.HasIntelligentAWD = true;
+IDAO database = new MockDAO();
 
-Console.WriteLine($"Dodano do katalogu: {myCar.Name} ({myCar.ProductionYear}), napęd AWD: {myCar.HasIntelligentAWD}");
+Console.WriteLine("--- CAR BRANDS ---");
+foreach (ICarBrand brand in database.GetAllBrands())
+{
+    Console.WriteLine(brand.ToString());
+}
+
+Console.WriteLine("\n--- CAR MODELS ---");
+foreach (ICarModel model in database.GetAllModels())
+{
+    Console.WriteLine(model.ToString());
+}

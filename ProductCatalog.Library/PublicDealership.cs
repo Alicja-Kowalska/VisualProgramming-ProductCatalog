@@ -2,12 +2,12 @@
 {
     public class PublicDealership
     {
-        public string Name; // Pole jawnie publiczne
-        string SecretLocation; // Brak modyfikatora
+        public string Name;
+        string SecretLocation;
 
         public void ShowInfo()
         {
-            Console.WriteLine("Salon dostępny zewsząd!");
+            Console.WriteLine("Dealership available everywhere!");
         }
     }
 }

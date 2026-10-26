@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Interfaces/Interfaces.csproj" />
   <Project Path="ProductCatalog.App/ProductCatalog.App.csproj" />
   <Project Path="ProductCatalog.Library/ProductCatalog.Library.csproj" />
   <Project Path="ProductCatalog.TlsApp/ProductCatalog.TlsApp.csproj" Id="34af7eac-0e67-4025-865f-89b09a78a0b0" />
