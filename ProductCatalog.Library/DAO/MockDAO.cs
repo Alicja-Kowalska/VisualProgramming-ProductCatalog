@@ -11,7 +11,6 @@ namespace ProductCatalog.Library.DAO
 
         public MockDAO()
         {
-            // Mock data for demonstration purposes
             brands = new List<ICarBrand>()
             {
                 new CarBrand { Name = "Ford", CountryOfOrigin = "USA", YearEstablished = 1903 },
@@ -25,7 +24,6 @@ namespace ProductCatalog.Library.DAO
             };
         }
 
-        // Returning collections as IEnumerable instead of fixed arrays
         public IEnumerable<ICarBrand> GetAllBrands() => brands;
         public IEnumerable<ICarModel> GetAllModels() => models;
     }

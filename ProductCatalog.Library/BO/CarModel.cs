@@ -5,7 +5,7 @@ namespace ProductCatalog.Library.BO
     public class CarModel : ICarModel
     {
         public string Name { get; set; }
-        public EngineTypeEnum EngineType { get; set; } // Using the new enumeration type
+        public EngineTypeEnum EngineType { get; set; }
         public bool HasIntelligentAWD { get; set; }
         public int ProductionYear { get; set; }
 
