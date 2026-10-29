@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Configuration;
 using Interfaces;
-using ProductCatalog.Library.DAO;
+using ProductCatalog.BLC;
 
-IDAO database = new MockDAO();
+// Read the library name from App.config
+string libraryName = ConfigurationManager.AppSettings["LibraryName"];
 
-Console.WriteLine("--- CAR BRANDS ---");
-foreach (ICarBrand brand in database.GetAllBrands())
+// Initialize Singleton and dynamically load the database
+BusinessLogic logic = BusinessLogic.GetInstance(libraryName);
+
+Console.WriteLine("--- CAR BRANDS (LOADED DYNAMICALLY) ---");
+foreach (ICarBrand brand in logic.Database.GetAllBrands())
 {
     Console.WriteLine(brand.ToString());
 }
 
-Console.WriteLine("\n--- CAR MODELS ---");
-foreach (ICarModel model in database.GetAllModels())
+Console.WriteLine("\n--- CAR MODELS (LOADED DYNAMICALLY) ---");
+foreach (ICarModel model in logic.Database.GetAllModels())
 {
     Console.WriteLine(model.ToString());
 }

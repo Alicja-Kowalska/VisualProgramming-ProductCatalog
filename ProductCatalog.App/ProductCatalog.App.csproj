@@ -1,8 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="..\ProductCatalog.Library\ProductCatalog.Library.csproj" />
+    <ProjectReference Include="..\ProductCatalog.BLC\ProductCatalog.BLC.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
