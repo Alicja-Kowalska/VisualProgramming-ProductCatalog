@@ -3,5 +3,4 @@
   <Project Path="ProductCatalog.App/ProductCatalog.App.csproj" />
   <Project Path="ProductCatalog.BLC/ProductCatalog.BLC.csproj" />
   <Project Path="ProductCatalog.Library/ProductCatalog.Library.csproj" />
-  <Project Path="ProductCatalog.TlsApp/ProductCatalog.TlsApp.csproj" />
 </Solution>

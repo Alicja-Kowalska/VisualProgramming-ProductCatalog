@@ -3,18 +3,12 @@ using System.Configuration;
 using Interfaces;
 using ProductCatalog.BLC;
 
-string libraryName = ConfigurationManager.AppSettings["LibraryName"];
+string libraryName = ConfigurationManager.AppSettings["LibraryName"]
+                     ?? throw new Exception("Set LibraryName in configuration");
+IDAO logic = BusinessLogic.GetInstance(libraryName);
 
-BusinessLogic logic = BusinessLogic.GetInstance(libraryName);
+Console.WriteLine("--- KENNEL CLUBS ---");
+Console.WriteLine(string.Join(Environment.NewLine, logic.GetAllClubs()));
 
-Console.WriteLine("--- CAR BRANDS ---");
-foreach (ICarBrand brand in logic.Database.GetAllBrands())
-{
-    Console.WriteLine(brand.ToString());
-}
-
-Console.WriteLine("\n--- CAR MODELS ---");
-foreach (ICarModel model in logic.Database.GetAllModels())
-{
-    Console.WriteLine(model.ToString());
-}
+Console.WriteLine("\n--- DOG BREEDS ---");
+Console.WriteLine(string.Join(Environment.NewLine, logic.GetAllBreeds()));

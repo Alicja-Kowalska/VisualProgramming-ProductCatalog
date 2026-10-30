@@ -4,7 +4,7 @@ namespace Interfaces
 {
     public interface IDAO
     {
-        IEnumerable<ICarBrand> GetAllBrands();
-        IEnumerable<ICarModel> GetAllModels();
+        IEnumerable<IKennelClub> GetAllClubs();
+        IEnumerable<IDogBreed> GetAllBreeds();
     }
 }
